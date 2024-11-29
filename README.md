@@ -1,50 +1,83 @@
-# React + TypeScript + Vite
+# Modern Todo List Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div style="display: flex; gap: 10px;">
+  <img src="https://raw.githubusercontent.com/react-icons/react-icons/master/react-icons.svg" height="40" alt="React Logo"/>
+  <img src="https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/supabase-logo.svg" height="40" alt="Supabase Logo"/>
+  <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png" height="40" alt="TypeScript Logo"/>
+</div>
 
-Currently, two official plugins are available:
+A modern, real-time todo list application built with React, TypeScript, and Supabase. Manage your tasks efficiently with a clean, intuitive interface and real-time updates.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Create, read, update, and delete todos
+- Real-time updates using Supabase
+- Clean and modern UI
+- Responsive design
+- Persistent storage
+- TypeScript for enhanced development experience
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Quick Start
 
-- Configure the top-level `parserOptions` property like this:
+### Prerequisites
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- Node.js (v14 or higher)
+- npm or yarn
+- Supabase account and project
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/todo-list.git
+cd todo-list
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+2. Install dependencies:
+```bash
+npm install
 ```
+
+3. Start the development server:
+```bash
+npm run dev
+```
+
+4. Open your browser and navigate to `http://localhost:5173`
+
+## Tech Stack
+
+- **Frontend:**
+  - React
+  - TypeScript
+  - Vite
+  - TailwindCSS
+
+- **Backend:**
+  - Supabase (Database & Authentication)
+
+## Project Structure
+
+```
+todo-list/
+├── src/
+│   ├── components/
+│   ├── hooks/
+│   ├── services/
+│   ├── types/
+│   └── utils/
+├── public/
+└── package.json
+```
+
+## Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/yourusername/todo-list/issues).
+
+## License
+
+This project is [MIT](LICENSE) licensed.
+
+---
+
+Built with React, Supabase, and TypeScript
