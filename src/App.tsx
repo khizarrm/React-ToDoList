@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import ProjectModal from "./Components/ProjectModal";
 import { Project, Task } from "./Interfaces";
 import ProjectList from "./Components/ProjectList";
 import ToDoList from "./Components/ToDoList";
@@ -66,7 +65,7 @@ function App() {
 
 
     async function removeProject(projectId : number){
-        const {data, error} = await removeProjectDb(projectId);
+        const {error} = await removeProjectDb(projectId);
 
         if (error){
           console.error("Error removing project", error)
@@ -90,7 +89,7 @@ function App() {
         ));
     }
 
-    async function removeToDoDb(projectId : number, todoId : number){
+    async function removeToDoDb(todoId : number){
       const {data, error} = await supabase
         .from("tasks")
         .delete()
@@ -99,7 +98,7 @@ function App() {
     }
     
     async function removeProjectTodo(projectId: number, todoId: number) {
-      const {data, error} = await removeToDoDb(projectId, todoId)
+      const {data, error} = await removeToDoDb(todoId)
       if (error){
         console.error("Error removing the todo", error)
       }
@@ -132,7 +131,7 @@ function App() {
             }
 
 
-            {showToDos && 
+            {showToDos && currProject && 
                 <ToDoList project={currProject} onBack={handleToDoBack} addToDos={addProjectTodo} removeToDo={removeProjectTodo}/> 
             }
         </div>

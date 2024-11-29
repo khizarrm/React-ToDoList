@@ -1,8 +1,7 @@
 import { useState, Dispatch, SetStateAction } from 'react'
-import {Task, Project}from '../Interfaces/index'
+import {Project}from '../Interfaces/index'
 import ProjectModal from './ProjectModal'
 import { Plus } from 'lucide-react'
-import ToDoList from './ToDoList'
 import { X } from "lucide-react";
 import { supabase } from "../supabaseclient";
 
@@ -28,7 +27,11 @@ function ProjectList(props : ProjectListProps){
 
     async function handleAddProject(name : string, description : string){
         const { data, error } = await addProjectToDb(name, description)
-        
+
+        if (!data || !data[0]) {
+            console.error('No data returned from database')
+            return
+        }
 
         if (error){
             console.error('Error adding project: ', error)
@@ -36,6 +39,7 @@ function ProjectList(props : ProjectListProps){
         }
 
         const newProject: Project = {
+            
             name: name,
             description: description,
             id: data[0].id,

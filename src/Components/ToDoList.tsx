@@ -29,11 +29,17 @@ function ToDoList(props : ToDoListProps){
             return
         }
 
+        if (!data || !data[0]) {
+            console.error('No data returned from database')
+            return
+        }
+        
         const newTask = {
             name : name, 
             completed : false, 
             id : data[0].id, 
         }
+
 
         props.addToDos(props.project, newTask)
         toggleForm()
