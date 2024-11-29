@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Task, Project } from "../Interfaces";
 
 interface ToDoListModalProps{
     onAdd : (name : string, description : string) => void, 
