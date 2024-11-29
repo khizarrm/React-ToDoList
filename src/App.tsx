@@ -98,7 +98,7 @@ function App() {
     }
     
     async function removeProjectTodo(projectId: number, todoId: number) {
-      const {data, error} = await removeToDoDb(todoId)
+      const { error} = await removeToDoDb(todoId)
       if (error){
         console.error("Error removing the todo", error)
       }
