@@ -2,7 +2,7 @@
 
 <div style="display: flex; gap: 10px;">
   <img src="https://raw.githubusercontent.com/react-icons/react-icons/master/react-icons.svg" height="40" alt="React Logo"/>
-  <img src="https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/supabase-logo.svg" height="40" alt="Supabase Logo"/>
+  <img src="https://raw.githubusercontent.com/supabase/supabase/master/web/static/img/supabase-logo.svg" height="40" alt="Supabase Logo"/>
   <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png" height="40" alt="TypeScript Logo"/>
 </div>
 
