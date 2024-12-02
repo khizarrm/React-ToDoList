@@ -8,6 +8,8 @@
 
 A modern, real-time todo list application built with React, TypeScript, and Supabase. Manage your tasks efficiently with a clean, intuitive interface and real-time updates.
 
+Link: https://khizars-todolist.netlify.app/
+
 ## Features
 
 - Create, read, update, and delete todos
